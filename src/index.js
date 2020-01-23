@@ -16,11 +16,23 @@ editMovieButton.click(function(){
     movies.forEach(({title, rating, id}) => {
       console.log(`id#${id} - ${title} - rating: ${rating}`);
       result +=
-          "<div><h5>Movie ID: " + id + "</h5><ul>" +
-          "<li>Movie title: " + title + "</li>" +
-          "<li>Movie rating: " + rating + "</li>" +
-          "</ul></div>";
+          // "<div><h5>Movie ID: " + id + "</h5><ul>" +
+          // "<li>Movie title: " + title + "</li>" +
+          // "<li>Movie rating: " + rating + "</li>" +
+          // "</ul></div>";
 
+          "<div class=\"flip-card\">" +
+      "<div class=\"flip-card-inner\">" +
+        "<div class=\"flip-card-front\">"+
+          "<img src=\"img_avatar.png\" alt=\"Avatar\" style=\"width:300px;height:300px;\">" +
+        "</div>" +
+        "<div class=\"flip-card-back\">" +
+            "<h1>" + title + "</h1>" +
+            "<p>" + rating + "</p>" +
+            "<p>" + id + "</p>" +
+        "</div>" +
+      "</div>" +
+    "</div>";
       console.log(result);
     });
     container.html(result);
