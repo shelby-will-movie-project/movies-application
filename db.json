@@ -7,12 +7,6 @@
       "img": "img/casablanca.jpg"
     },
     {
-      "title": "Star Wars: A New Hope",
-      "rating": "5",
-      "id": 2,
-      "img": "img/StarwarsANewHope.jpg"
-    },
-    {
       "title": "Test",
       "rating": "",
       "id": 3,
