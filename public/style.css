@@ -1,7 +1,13 @@
 html, body {
     height: 100%;
+    background: rgb(164,3,111);
+    background: linear-gradient(90deg, rgba(164,3,111,1) 0%, rgba(4,139,168,1) 35%, rgba(22,219,147,1) 100%);
 }
-
 #container {
     text-align: center;
+    background-color: black;
+    color: #F29E4C;
+}
+ul {
+    list-style-type: none;
 }

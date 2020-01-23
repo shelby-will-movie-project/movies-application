@@ -20,6 +20,7 @@ editMovieButton.click(function(){
           "<li>Movie title: " + title + "</li>" +
           "<li>Movie rating: " + rating + "</li>" +
           "</ul></div>";
+
       console.log(result);
     });
     container.html(result);
