@@ -1,7 +1,7 @@
 //Node import of JQuery from mode_modules
 const $ = require('jquery');
 //Node import from api.js
-const {getMovies, addMovie, editMovie} = require('./api.js');
+const {getMovies, addMovie, editMovie, deleteMovie} = require('./api.js');
 
 //Edit movie test
 const editMovieButton = $("#edit-movie-test");
@@ -47,6 +47,12 @@ const addMovieName = $('#add-movie-name');
 const addMovieRating = $('#add-movie-rating');
 submitNewMovie.click(function(){
   addMovie(addMovieName.val(), addMovieRating.val());
+});
+
+const deleteMovieID = $("#delete-movie-id");
+const deleteMovieButton = $("#delete-movie-button");
+deleteMovieButton.click(function(){
+  deleteMovie(deleteMovieID.val());
 });
 
 getMovies().then((movies) => {
