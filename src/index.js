@@ -4,7 +4,7 @@ const $ = require('jquery');
 const {getMovies, addMovie} = require('./api.js');
 
 //Movie ID Counter
-let movieID = 7;
+let movieID = 8;
 
 const container = $('#container');
 
