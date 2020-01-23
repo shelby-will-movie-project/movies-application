@@ -29,6 +29,11 @@
       "title": "Home Alone 2",
       "rating": "2",
       "id": 6
+    },
+    {
+      "title": "Test 3",
+      "rating": "3",
+      "id": 7
     }
   ]
 }
