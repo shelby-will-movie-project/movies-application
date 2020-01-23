@@ -3,8 +3,8 @@ module.exports = {
     return fetch('/api/movies')
       .then(response => response.json());
   },
-  addMovie: (title, rating, movieID) => {
-    const moviePost = {title: title, rating: rating, id: movieID};
+  addMovie: (title, rating) => {
+    const moviePost = {title: title, rating: rating};
     const url = '/api/movies';
     const options = {
       method: 'POST',

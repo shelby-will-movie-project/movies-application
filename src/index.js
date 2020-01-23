@@ -3,8 +3,6 @@ const $ = require('jquery');
 //Node import from api.js
 const {getMovies, addMovie, editMovie} = require('./api.js');
 
-let movieId = 8;
-
 //Edit movie test
 const editMovieButton = $("#edit-movie-test");
 editMovieButton.click(function(){
@@ -33,7 +31,6 @@ editMovieButton.click(function(){
         "</div>" +
       "</div>" +
     "</div>";
-      console.log(result);
     });
     container.html(result);
   }).catch((error) => {
@@ -49,9 +46,7 @@ const submitNewMovie = $('#add-movie-button');
 const addMovieName = $('#add-movie-name');
 const addMovieRating = $('#add-movie-rating');
 submitNewMovie.click(function(){
-  addMovie(addMovieName.val(), addMovieRating.val(), movieID);
-  movieID++;
-  console.log(movieID);
+  addMovie(addMovieName.val(), addMovieRating.val());
 });
 
 getMovies().then((movies) => {
