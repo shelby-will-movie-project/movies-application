@@ -13,7 +13,7 @@ module.exports = {
       },
       body: JSON.stringify(moviePost),
     };
-    fetch(url, options
+    fetch(url, options)
         .then(response => response.json())
   },
 };
