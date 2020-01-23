@@ -2,15 +2,33 @@
   "movies": [
     {
       "title": "Casablanca",
-      "rating": 9000,
+      "rating": 3,
       "id": 1,
       "img": "img/casablanca.jpg"
     },
     {
+      "title": "Star Wars: A New Hope",
+      "rating": 4,
+      "id": 2,
+      "img": "img/StarWarsANewHope.jpg"
+    },
+    {
       "title": "Test",
-      "rating": "",
-      "id": 3,
-      "img": ""
+      "rating": "4",
+      "img": "",
+      "id": 6
+    },
+    {
+      "title": "Ghostbusters",
+      "rating": "3",
+      "img": "",
+      "id": 7
+    },
+    {
+      "title": "Ghostbusters",
+      "rating": "5",
+      "img": "",
+      "id": 8
     }
   ]
 }

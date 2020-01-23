@@ -20,9 +20,9 @@ editMovieButton.click(function(){
           "<img src=\"" + img +"\" alt=\"Avatar\" style=\"width:300px;height:300px;\">" +
         "</div>" +
         "<div class=\"flip-card-back\">" +
-            "<h1>" + title + "</h1>" +
-            "<p>" + rating + "</p>" +
-            "<p>" + id + "</p>" +
+            "<h1>Title: " + title + "</h1>" +
+            "<p>Rating: " + rating + "</p>" +
+            "<p>ID: " + id + "</p>" +
         "</div>" +
       "</div>" +
     "</div>";
@@ -55,6 +55,9 @@ getMovies().then((movies) => {
   let result = '';
   movies.forEach(({title, rating, id, img}) => {
     console.log(`id#${id} - ${title} - rating: ${rating}`);
+    if(img === "") {
+      img = "img/Coming-Soon.jpg";
+    }
     result +=
         "<div class=\"flip-card\">" +
         "<div class=\"flip-card-inner\">" +
@@ -62,9 +65,9 @@ getMovies().then((movies) => {
         "<img src=\"" + img +"\" alt=\"Avatar\" style=\"width:300px;height:300px;\">" +
         "</div>" +
         "<div class=\"flip-card-back\">" +
-        "<h1>" + title + "</h1>" +
-        "<p>" + rating + "</p>" +
-        "<p>" + id + "</p>" +
+        "<h1>Title: " + title + "</h1>" +
+        "<p>Rating: " + rating + "</p>" +
+        "<p>ID: " + id + "</p>" +
         "</div>" +
         "</div>" +
         "</div>";
