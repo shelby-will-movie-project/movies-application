@@ -3,9 +3,6 @@ module.exports = {
     return fetch('/api/movies')
       .then(response => response.json());
   },
-  getMovie: () => {
-
-  },
   addMovie: (title, rating, movieID) => {
     const moviePost = {title: title, rating: rating, id: movieID};
     const url = '/api/movies';
@@ -18,5 +15,5 @@ module.exports = {
     };
     fetch(url, options)
         .then(response => response.json())
-  }
+  },
 };
