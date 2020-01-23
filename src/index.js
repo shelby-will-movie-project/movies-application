@@ -11,18 +11,13 @@ editMovieButton.click(function(){
   getMovies().then((movies) => {
     console.log('Here are all the movies:');
     let result = '';
-    movies.forEach(({title, rating, id}) => {
+    movies.forEach(({title, rating, id, img}) => {
       console.log(`id#${id} - ${title} - rating: ${rating}`);
       result +=
-          // "<div><h5>Movie ID: " + id + "</h5><ul>" +
-          // "<li>Movie title: " + title + "</li>" +
-          // "<li>Movie rating: " + rating + "</li>" +
-          // "</ul></div>";
-
           "<div class=\"flip-card\">" +
       "<div class=\"flip-card-inner\">" +
         "<div class=\"flip-card-front\">"+
-          "<img src=\"img_avatar.png\" alt=\"Avatar\" style=\"width:300px;height:300px;\">" +
+          "<img src=\"" + img +"\" alt=\"Avatar\" style=\"width:300px;height:300px;\">" +
         "</div>" +
         "<div class=\"flip-card-back\">" +
             "<h1>" + title + "</h1>" +
@@ -52,13 +47,21 @@ submitNewMovie.click(function(){
 getMovies().then((movies) => {
   console.log('Here are all the movies:');
   let result = '';
-  movies.forEach(({title, rating, id}) => {
+  movies.forEach(({title, rating, id, img}) => {
     console.log(`id#${id} - ${title} - rating: ${rating}`);
     result +=
-        "<div><h5>Movie ID: " + id + "</h5><ul>" +
-        "<li>Movie title: " + title + "</li>" +
-        "<li>Movie rating: " + rating + "</li>" +
-        "</ul></div>";
+        "<div class=\"flip-card\">" +
+        "<div class=\"flip-card-inner\">" +
+        "<div class=\"flip-card-front\">"+
+        "<img src=\"" + img +"\" alt=\"Avatar\" style=\"width:300px;height:300px;\">" +
+        "</div>" +
+        "<div class=\"flip-card-back\">" +
+        "<h1>" + title + "</h1>" +
+        "<p>" + rating + "</p>" +
+        "<p>" + id + "</p>" +
+        "</div>" +
+        "</div>" +
+        "</div>";
     console.log(result);
   });
   container.html(result);
