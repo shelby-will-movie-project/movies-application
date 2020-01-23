@@ -3,14 +3,17 @@ const $ = require('jquery');
 //Node import from api.js
 const {getMovies, addMovie} = require('./api.js');
 
+//Movie ID Counter
+let movieID = 6;
+
 const container = $('#container');
 
 const submitNewMovie = $('#add-movie-button');
 const addMovieName = $('#add-movie-name');
 const addMovieRating = $('#add-movie-rating');
-const addMovieId = $('#add-movie-id');
 submitNewMovie.click(function(){
-  addMovie(addMovieName.val(), addMovieRating.val(), addMovieId.val());
+  addMovie(addMovieName.val(), addMovieRating.val(), movieID);
+  movieID++;
 });
 
 getMovies().then((movies) => {
