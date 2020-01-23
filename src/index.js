@@ -1,8 +1,8 @@
-/**
- * require style imports
- */
+//Node import of JQuery from mode_modules
 const $ = require('jquery');
+//Node import from api.js
 const {getMovies, addMovie} = require('./api.js');
+
 const container = $('#container');
 
 const submitNewMovie = $('#add-movie-button');

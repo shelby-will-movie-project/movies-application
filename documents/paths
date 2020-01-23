@@ -1,0 +1,7 @@
+/movies => GET => a list or collection of movies
+/movies/id => GET => One specific movie
+/movies => POST => Create a new movie and add to database => Title, Rating, Id
+/movies/id => POST => NOT_AVAILABLE
+/movies/id => PUT => Update a movie => New Title or New Rating
+/movies => DELETE => NOT_AVAILABLE
+/movies/id => DELETE => Delete a specific movie
