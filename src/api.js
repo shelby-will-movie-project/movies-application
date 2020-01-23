@@ -16,4 +16,17 @@ module.exports = {
     fetch(url, options)
         .then(response => response.json())
   },
+  editMovie: (id, title, rating) => {
+    const moviePost = {title: title, rating: rating};
+    const url = '/api/movies/' + id;
+    const options = {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(moviePost),
+    };
+    fetch(url, options)
+        .then(response => response.json())
+  }
 };
