@@ -17,7 +17,7 @@ module.exports = {
         .then(response => response.json())
   },
   editMovie: (id, title, rating) => {
-    const moviePost = {title: title, rating: rating};
+    const moviePost = {title: title, rating: rating, img: ""};
     const url = '/api/movies/' + id;
     const options = {
       method: 'PUT',

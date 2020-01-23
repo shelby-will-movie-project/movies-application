@@ -13,22 +13,10 @@
       "img": "img/StarWarsANewHope.jpg"
     },
     {
-      "title": "Test",
-      "rating": "4",
-      "img": "",
-      "id": 6
-    },
-    {
-      "title": "Ghostbusters",
-      "rating": "3",
-      "img": "",
-      "id": 7
-    },
-    {
-      "title": "Ghostbusters",
+      "title": "Jurassic Park",
       "rating": "5",
       "img": "",
-      "id": 8
+      "id": 3
     }
   ]
 }
