@@ -17,6 +17,18 @@
       "rating": "5",
       "img": "",
       "id": 3
+    },
+    {
+      "title": "Home Alone 2",
+      "rating": "4",
+      "img": "",
+      "id": 4
+    },
+    {
+      "title": "Home Alone 67",
+      "rating": "4",
+      "img": "",
+      "id": 5
     }
   ]
 }

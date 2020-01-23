@@ -3,6 +3,9 @@ html, body {
     background: rgb(164,3,111);
     background: linear-gradient(90deg, rgba(164,3,111,1) 0%, rgba(4,139,168,1) 35%, rgba(22,219,147,1) 100%);
 }
+h1 {
+    padding-top: 1em;
+}
 #container {
     text-align: center;
     margin: auto;
@@ -21,7 +24,6 @@ ul {
     background-color: transparent;
     width: 300px;
     height: 300px;
-    border: 1px solid #f1f1f1;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
@@ -56,7 +58,7 @@ ul {
 
 /* Style the back side */
 .flip-card-back {
-    background-color: dodgerblue;
-    color: white;
+    background-color: #efea5a;
+    color: black;
     transform: rotateY(180deg);
 }
