@@ -6,6 +6,10 @@ html, body {
 h1 {
     padding-top: 1em;
 }
+#crud-container {
+    text-align: center;
+}
+
 #container {
     text-align: center;
     margin: auto;

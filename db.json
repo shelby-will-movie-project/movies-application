@@ -13,22 +13,16 @@
       "img": "img/StarWarsANewHope.jpg"
     },
     {
-      "title": "Jurassic Park",
-      "rating": "5",
-      "img": "",
-      "id": 3
+      "title": "Goonies",
+      "rating": 4,
+      "id": 3,
+      "img": "img/goonies.jpg"
     },
     {
-      "title": "Home Alone 2",
-      "rating": "4",
-      "img": "",
-      "id": 4
-    },
-    {
-      "title": "Home Alone 67",
-      "rating": "4",
-      "img": "",
-      "id": 5
+      "title": "Transformers",
+      "rating": 2,
+      "id": 4,
+      "img": "img/transformers.webp"
     }
   ]
 }
