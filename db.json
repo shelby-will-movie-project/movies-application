@@ -2,7 +2,7 @@
   "movies": [
     {
       "title": "Casablanca",
-      "rating": "4",
+      "rating": 9000,
       "id": 1
     },
     {
@@ -11,33 +11,8 @@
       "id": 2
     },
     {
-      "title": "Test",
-      "rating": "4",
-      "id": "3"
-    },
-    {
       "title": "Home Alone",
-      "rating": "3",
-      "id": 4
-    },
-    {
-      "title": "Tropic Thunder",
-      "rating": "5",
-      "id": 5
-    },
-    {
-      "title": "Home Alone 2",
-      "rating": "2",
-      "id": 6
-    },
-    {
-      "title": "Test 3",
-      "rating": "3",
-      "id": 7
-    },
-    {
-      "title": "Home Alone 6",
-      "rating": "3",
+      "rating": "4",
       "id": 8
     }
   ]
