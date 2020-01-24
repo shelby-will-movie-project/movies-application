@@ -11,7 +11,7 @@ const loading = $('#loading');
 function refreshMovies() {
   getMovies().then((movies) => {
     let result = '';
-    movies.forEach(({title, rating, id, img}) => {
+    movies.forEach(({title, rating, id, img, genre}) => {
       if(img === "") {
         img = "img/Coming-Soon.jpg";
       }
@@ -24,6 +24,7 @@ function refreshMovies() {
           "<div class=\"flip-card-back\">" +
           "<h3>" + title + "</h3>" +
           "<h5>Rating: " + buildStars(rating) + "</h5>" +
+          "<h5>Genre: " + genre + "</h5>" +
           "<h5>ID: " + id + "</h5>" +
           "</div>" +
           "</div>" +
@@ -51,13 +52,14 @@ function buildStars(numberOfStars) {
 const submitNewMovie = $('#add-movie-button');
 const addMovieName = $('#add-movie-name');
 const addMovieRating = $('#add-movie-rating');
+const addMovieGenre = $("#add-movie-genre");
 submitNewMovie.click(function(){
   container.hide();
   loading.show();
   loading.html("<div class='loadingio-spinner-spinner-ib6rz94n49a loading1'><div class='ldio-ioww6g0mvq loading2'>" +
       "<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>" +
       "<div></div><div></div></div></div>");
-  addMovie(addMovieName.val(), addMovieRating.val());
+  addMovie(addMovieName.val(), addMovieRating.val(), addMovieGenre.val());
   refreshMovies();
 });
 
@@ -66,13 +68,14 @@ const editMovieButton = $("#edit-movie-button");
 const editMovieID = $("#edit-movie-id");
 const editMovieName = $("#edit-movie-name");
 const editMovieRating = $("#edit-movie-rating");
+const editMovieGenre = $("#edit-movie-genre");
 editMovieButton.click(function(){
   container.hide();
   loading.show();
   loading.html("<div class='loadingio-spinner-spinner-ib6rz94n49a loading1'><div class='ldio-ioww6g0mvq loading2'>" +
       "<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>" +
       "<div></div><div></div></div></div>");
-  editMovie(editMovieID.val(), editMovieName.val(), editMovieRating.val());
+  editMovie(editMovieID.val(), editMovieName.val(), editMovieRating.val(), editMovieGenre.val());
   refreshMovies();
 });
 
@@ -93,7 +96,7 @@ deleteMovieButton.click(function(){
 getMovies().then((movies) => {
   container.hide();
   let result = '';
-  movies.forEach(({title, rating, id, img}) => {
+  movies.forEach(({title, rating, id, img, genre}) => {
     if(img === "") {
       img = "img/Coming-Soon.jpg";
     }
@@ -106,6 +109,7 @@ getMovies().then((movies) => {
         "<div class=\"flip-card-back\">" +
         "<h3>" + title + "</h3>" +
         "<h5>Rating: " + buildStars(rating) + "</h5>" +
+        "<h5>Genre: " + genre + "</h5>" +
         "<h5>ID: " + id + "</h5>" +
         "</div>" +
         "</div>" +

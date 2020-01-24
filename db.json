@@ -4,43 +4,50 @@
       "title": "Casablanca",
       "rating": 3,
       "id": 1,
-      "img": "img/casablanca.jpg"
+      "img": "img/casablanca.jpg",
+      "genre": "Romance"
     },
     {
       "title": "Star Wars: A New Hope",
       "rating": 4,
       "id": 2,
-      "img": "img/StarWarsANewHope.jpg"
+      "img": "img/StarWarsANewHope.jpg",
+      "genre": "Action"
     },
     {
       "title": "Goonies",
       "rating": 4,
       "id": 3,
-      "img": "img/goonies.jpg"
+      "img": "img/goonies.jpg",
+      "genre": "Comedy"
     },
     {
       "title": "Transformers",
       "rating": 2,
       "id": 4,
-      "img": "img/transformers.webp"
+      "img": "img/transformers.webp",
+      "genre": "Action"
     },
     {
       "title": "Under Seige",
       "rating": 4,
       "id": 5,
-      "img": "img/under-siege.jpg"
+      "img": "img/under-siege.jpg",
+      "genre": "Action"
     },
     {
       "title": "Super Troopers",
       "rating": 4,
       "img": "img/super-troopers.jpg",
-      "id": 6
+      "id": 6,
+      "genre": "Comedy"
     },
     {
       "title": "Harold & Kumar Go to White Castle",
       "rating": 4,
       "img": "img/harold-kumar.jpg",
-      "id": 7
+      "id": 7,
+      "genre": "Comedy"
     }
   ]
 }

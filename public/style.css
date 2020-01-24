@@ -19,7 +19,6 @@ body.modal-open div.modal-backdrop {
 #container {
     text-align: center;
     margin: auto;
-    /*background-color: black;*/
     color: #F29E4C;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
