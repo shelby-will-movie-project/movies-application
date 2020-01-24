@@ -22,9 +22,9 @@ function refreshMovies() {
           "<img src=\"" + img +"\" alt=\"Avatar\" style=\"width:300px;height:300px;\">" +
           "</div>" +
           "<div class=\"flip-card-back\">" +
-          "<h3>Title: " + title + "</h3>" +
-          "<p>Rating: " + rating + "</p>" +
-          "<p>ID: " + id + "</p>" +
+          "<h3>" + title + "</h3>" +
+          "<h5>Rating: " + buildStars(rating) + "</h5>" +
+          "<h5>ID: " + id + "</h5>" +
           "</div>" +
           "</div>" +
           "</div>";
@@ -36,6 +36,15 @@ function refreshMovies() {
     alert('Oh no! Something went wrong.\nCheck the console for details.')
     console.log(error);
   });
+}
+
+//Build Font-Awesome Star
+function buildStars(numberOfStars) {
+  let returnString = '';
+  for(let i=0;i<numberOfStars;i++) {
+    returnString += "<i class='fas fa-star'></i>"
+  }
+  return returnString;
 }
 
 //Add movie
@@ -95,9 +104,9 @@ getMovies().then((movies) => {
         "<img src=\"" + img +"\" alt=\"Avatar\" style=\"width:300px;height:300px;\">" +
         "</div>" +
         "<div class=\"flip-card-back\">" +
-        "<h3>Title: " + title + "</h3>" +
-        "<p>Rating: " + rating + "</p>" +
-        "<p>ID: " + id + "</p>" +
+        "<h3>" + title + "</h3>" +
+        "<h5>Rating: " + buildStars(rating) + "</h5>" +
+        "<h5>ID: " + id + "</h5>" +
         "</div>" +
         "</div>" +
         "</div>";
