@@ -3,8 +3,8 @@ module.exports = {
     return fetch('/api/movies')
       .then(response => response.json());
   },
-  addMovie: (title, rating) => {
-    const moviePost = {title: title, rating: rating, img: ""};
+  addMovie: (title, rating, genre) => {
+    const moviePost = {title: title, rating: rating, img: "", genre: genre};
     const url = '/api/movies';
     const options = {
       method: 'POST',
@@ -16,8 +16,8 @@ module.exports = {
     fetch(url, options)
         .then(response => response.json())
   },
-  editMovie: (id, title, rating) => {
-    const moviePost = {title: title, rating: rating, img: ""};
+  editMovie: (id, title, rating, genre) => {
+    const moviePost = {title: title, rating: rating, img: "", genre: genre};
     const url = '/api/movies/' + id;
     const options = {
       method: 'PUT',
@@ -39,6 +39,5 @@ module.exports = {
     };
     fetch(url, options)
         .then(response => response.json())
-  },
-
+  }
 };
