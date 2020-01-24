@@ -22,7 +22,7 @@ function refreshMovies() {
           "<img src=\"" + img +"\" alt=\"Avatar\" style=\"width:300px;height:300px;\">" +
           "</div>" +
           "<div class=\"flip-card-back\">" +
-          "<h1>Title: " + title + "</h1>" +
+          "<h3>Title: " + title + "</h3>" +
           "<p>Rating: " + rating + "</p>" +
           "<p>ID: " + id + "</p>" +
           "</div>" +
@@ -95,7 +95,7 @@ getMovies().then((movies) => {
         "<img src=\"" + img +"\" alt=\"Avatar\" style=\"width:300px;height:300px;\">" +
         "</div>" +
         "<div class=\"flip-card-back\">" +
-        "<h1>Title: " + title + "</h1>" +
+        "<h3>Title: " + title + "</h3>" +
         "<p>Rating: " + rating + "</p>" +
         "<p>ID: " + id + "</p>" +
         "</div>" +

@@ -25,10 +25,28 @@
       "img": "img/transformers.webp"
     },
     {
-      "title": "Steven universe the movie",
-      "rating": "5",
-      "img": "",
+      "title": "Under Seige",
+      "rating": 4,
+      "id": 5,
+      "img": "img/under-siege.jpg"
+    },
+    {
+      "title": "Super Troopers",
+      "rating": 4,
+      "img": "img/super-troopers.jpg",
       "id": 6
+    },
+    {
+      "title": "Harold & Kumar Go to White Castle",
+      "rating": 4,
+      "img": "img/harold-kumar.jpg",
+      "id": 7
+    },
+    {
+      "title": "Ghostbusters",
+      "rating": "4",
+      "img": "",
+      "id": 8
     }
   ]
 }

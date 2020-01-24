@@ -3,8 +3,8 @@ html, body {
     background: rgb(164,3,111);
     background: linear-gradient(90deg, rgba(164,3,111,1) 0%, rgba(4,139,168,1) 35%, rgba(22,219,147,1) 100%);
 }
-h1 {
-    padding-top: 1em;
+h3 {
+    padding: 1em;
 }
 body.modal-open div.modal-backdrop {
     z-index: 0;
