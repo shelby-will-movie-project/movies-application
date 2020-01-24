@@ -23,6 +23,24 @@
       "rating": 2,
       "id": 4,
       "img": "img/transformers.webp"
+    },
+    {
+      "title": "Steven universe the movie",
+      "rating": "5",
+      "img": "",
+      "id": 6
+    },
+    {
+      "title": "Take me home tonight",
+      "rating": "2",
+      "img": "",
+      "id": 7
+    },
+    {
+      "title": "bee movie",
+      "rating": "5",
+      "img": "",
+      "id": 8
     }
   ]
 }

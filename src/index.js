@@ -11,7 +11,9 @@ const editMovieID = $("#edit-movie-id");
 const editMovieName = $("#edit-movie-name");
 const editMovieRating = $("#edit-movie-rating");
 editMovieButton.click(function(){
-  container.html("<h1>Loading...</h1>");
+  container.html("<div class=\"loadingio-spinner-spinner-ib6rz94n49a\"><div class=\"ldio-ioww6g0mvq\">\n" +
+      "<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>\n" +
+      "</div></div>");
   editMovie(editMovieID.val(), editMovieName.val(), editMovieRating.val());
   getMovies().then((movies) => {
     console.log('Here are all the movies:');
@@ -47,7 +49,9 @@ const submitNewMovie = $('#add-movie-button');
 const addMovieName = $('#add-movie-name');
 const addMovieRating = $('#add-movie-rating');
 submitNewMovie.click(function(){
-  container.html("<h1>Loading...</h1>");
+  container.html("<div class=\"loadingio-spinner-spinner-ib6rz94n49a\"><div class=\"ldio-ioww6g0mvq\">\n" +
+      "<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>\n" +
+      "</div></div>");
   addMovie(addMovieName.val(), addMovieRating.val());
   getMovies().then((movies) => {
     console.log('Here are all the movies:');
@@ -82,7 +86,9 @@ submitNewMovie.click(function(){
 const deleteMovieID = $("#delete-movie-id");
 const deleteMovieButton = $("#delete-movie-button");
 deleteMovieButton.click(function(){
-  container.html("<h1>Loading...</h1>");
+  container.html("<div class=\"loadingio-spinner-spinner-ib6rz94n49a\"><div class=\"ldio-ioww6g0mvq\">\n" +
+      "<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>\n" +
+      "</div></div>");
   deleteMovie(deleteMovieID.val());
   getMovies().then((movies) => {
     console.log('Here are all the movies:');
