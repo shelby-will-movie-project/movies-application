@@ -27,38 +27,133 @@
     </form>
 </nav>
 
+<!--crud container and modals-->
 <div id="crud-container">
-    <h3>Add Movie</h3>
-        <label for="add-movie-name">Movie Name</label>
-        <input id="add-movie-name" name="movie-name" type="text">
+    <!-- Add Button trigger modal -->
+    <button type="button" class="btn" style="background-color: #F29E4C" data-toggle="modal" data-target="#exampleModal">
+        Add Movie
+    </button>
 
-        <label for="add-movie-rating">Movie Rating</label>
-        <input id="add-movie-rating" name="movie-rating" type="text">
+    <!-- Add Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Movie:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <label for="add-movie-name">Movie Name</label><br>
+                    <input id="add-movie-name" name="movie-name" type="text"><br>
 
-        <button type="submit" id="add-movie-button">SUBMIT</button>
+                    <label for="add-movie-rating">Movie Rating</label><br>
+                    <input id="add-movie-rating" name="movie-rating" type="text"><br>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" id="add-movie-button">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <h3>Edit Movie</h3>
-        <label for="edit-movie-id">Movie ID</label>
-        <input id="edit-movie-id" name="movie-id" type="text">
+    <!-- Edit Button trigger modal -->
+    <button type="button" class="btn" style="background-color: #F29E4C" data-toggle="modal" data-target="#exampleModal2">
+        Edit Movie
+    </button>
 
-        <label for="edit-movie-name">Movie Name</label>
-        <input id="edit-movie-name" name="movie-name" type="text">
+    <!-- Edit Modal -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel2">Edit Movie:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <label for="edit-movie-id">Movie ID</label><br>
+                    <input id="edit-movie-id" name="movie-id" type="text"><br>
 
-        <label for="edit-movie-rating">Movie Rating</label>
-        <input id="edit-movie-rating" name="movie-rating" type="text">
+                    <label for="edit-movie-name">Movie Name</label><br>
+                    <input id="edit-movie-name" name="movie-name" type="text"><br>
 
-        <button type="submit" id="edit-movie-button">SUBMIT</button>
+                    <label for="edit-movie-rating">Movie Rating</label><br>
+                    <input id="edit-movie-rating" name="movie-rating" type="text"><br>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" id="edit-movie-button">SUBMIT</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <h3>Delete Move</h3>
-        <label for="delete-movie-id">Movie ID</label>
-        <input id="delete-movie-id" name="movie-ID" type="text">
+    <!-- Delete Button trigger modal -->
+    <button type="button" class="btn" style="background-color: #F29E4C" data-toggle="modal" data-target="#exampleModal3">
+        Delete Movie
+    </button>
 
-        <button type="submit" id="delete-movie-button">SUBMIT</button>
+    <!-- Delete Modal -->
+    <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel3">Delete Movie:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <label for="delete-movie-id">Movie ID</label><br>
+                    <input id="delete-movie-id" name="movie-ID" type="text"><br>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" id="delete-movie-button">SUBMIT</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<!--<div id="crud-container">-->
+<!--    <h3>Add Movie</h3>-->
+<!--        <label for="add-movie-name">Movie Name</label>-->
+<!--        <input id="add-movie-name" name="movie-name" type="text">-->
+
+<!--        <label for="add-movie-rating">Movie Rating</label>-->
+<!--        <input id="add-movie-rating" name="movie-rating" type="text">-->
+
+<!--        <button type="submit" id="add-movie-button">SUBMIT</button>-->
+
+<!--    <h3>Edit Movie</h3>-->
+<!--        <label for="edit-movie-id">Movie ID</label>-->
+<!--        <input id="edit-movie-id" name="movie-id" type="text">-->
+
+<!--        <label for="edit-movie-name">Movie Name</label>-->
+<!--        <input id="edit-movie-name" name="movie-name" type="text">-->
+
+<!--        <label for="edit-movie-rating">Movie Rating</label>-->
+<!--        <input id="edit-movie-rating" name="movie-rating" type="text">-->
+
+<!--        <button type="submit" id="edit-movie-button">SUBMIT</button>-->
+
+<!--    <h3>Delete Move</h3>-->
+<!--        <label for="delete-movie-id">Movie ID</label>-->
+<!--        <input id="delete-movie-id" name="movie-ID" type="text">-->
+
+<!--        <button type="submit" id="delete-movie-button">SUBMIT</button>-->
+<!--</div>-->
 
 <!--loading container-->
     <div id="container">
-        <h1>Loading...</h1>
+        <div class="loadingio-spinner-spinner-ib6rz94n49a loading1"><div class="ldio-ioww6g0mvq loading2">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        </div></div>
     </div>
 
 <!--script tags-->
