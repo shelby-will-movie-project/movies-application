@@ -6,6 +6,9 @@ html, body {
 h1 {
     padding-top: 1em;
 }
+body.modal-open div.modal-backdrop {
+    z-index: 0;
+}
 #crud-container {
     text-align: center;
 }
