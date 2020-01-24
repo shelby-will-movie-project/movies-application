@@ -41,12 +41,6 @@
       "rating": 4,
       "img": "img/harold-kumar.jpg",
       "id": 7
-    },
-    {
-      "title": "Ghostbusters",
-      "rating": "4",
-      "img": "",
-      "id": 8
     }
   ]
 }
