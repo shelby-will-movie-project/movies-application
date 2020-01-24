@@ -12,7 +12,10 @@ body.modal-open div.modal-backdrop {
 #crud-container {
     text-align: center;
 }
-
+#loading {
+    padding-top: 12em;
+    display: flex;
+}
 #container {
     text-align: center;
     margin: auto;

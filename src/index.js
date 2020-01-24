@@ -4,6 +4,7 @@ const $ = require('jquery');
 const {getMovies, addMovie, editMovie, deleteMovie} = require('./api.js');
 
 const container = $('#container');
+const loading = $('#loading');
 
 //Edit movie
 const editMovieButton = $("#edit-movie-button");
@@ -11,15 +12,15 @@ const editMovieID = $("#edit-movie-id");
 const editMovieName = $("#edit-movie-name");
 const editMovieRating = $("#edit-movie-rating");
 editMovieButton.click(function(){
-  container.html("<div class=\"loadingio-spinner-spinner-ib6rz94n49a\"><div class=\"ldio-ioww6g0mvq\">\n" +
-      "<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>\n" +
-      "</div></div>");
+  container.hide();
+  loading.show();
+  loading.html("<div class='loadingio-spinner-spinner-ib6rz94n49a loading1'><div class='ldio-ioww6g0mvq loading2'>" +
+      "<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>" +
+      "<div></div><div></div></div></div>");
   editMovie(editMovieID.val(), editMovieName.val(), editMovieRating.val());
   getMovies().then((movies) => {
-    console.log('Here are all the movies:');
     let result = '';
     movies.forEach(({title, rating, id, img}) => {
-      console.log(`id#${id} - ${title} - rating: ${rating}`);
       if(img === "") {
         img = "img/Coming-Soon.jpg";
       }
@@ -36,11 +37,12 @@ editMovieButton.click(function(){
           "</div>" +
           "</div>" +
           "</div>";
-      console.log(result);
     });
+    loading.hide();
+    container.show();
     container.html(result);
   }).catch((error) => {
-    alert('Oh no! Something went wrong.\nCheck the console for details.')
+    alert('Oh no! Something went wrong.\nCheck the console for details.');
     console.log(error);
   });
 });
@@ -49,15 +51,15 @@ const submitNewMovie = $('#add-movie-button');
 const addMovieName = $('#add-movie-name');
 const addMovieRating = $('#add-movie-rating');
 submitNewMovie.click(function(){
-  container.html("<div class=\"loadingio-spinner-spinner-ib6rz94n49a\"><div class=\"ldio-ioww6g0mvq\">\n" +
-      "<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>\n" +
-      "</div></div>");
+  container.hide();
+  loading.show();
+  loading.html("<div class='loadingio-spinner-spinner-ib6rz94n49a loading1'><div class='ldio-ioww6g0mvq loading2'>" +
+      "<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>" +
+      "<div></div><div></div></div></div>");
   addMovie(addMovieName.val(), addMovieRating.val());
   getMovies().then((movies) => {
-    console.log('Here are all the movies:');
     let result = '';
     movies.forEach(({title, rating, id, img}) => {
-      console.log(`id#${id} - ${title} - rating: ${rating}`);
       if(img === "") {
         img = "img/Coming-Soon.jpg";
       }
@@ -74,8 +76,9 @@ submitNewMovie.click(function(){
           "</div>" +
           "</div>" +
           "</div>";
-      console.log(result);
     });
+    loading.hide();
+    container.show();
     container.html(result);
   }).catch((error) => {
     alert('Oh no! Something went wrong.\nCheck the console for details.')
@@ -86,15 +89,15 @@ submitNewMovie.click(function(){
 const deleteMovieID = $("#delete-movie-id");
 const deleteMovieButton = $("#delete-movie-button");
 deleteMovieButton.click(function(){
-  container.html("<div class=\"loadingio-spinner-spinner-ib6rz94n49a\"><div class=\"ldio-ioww6g0mvq\">\n" +
-      "<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>\n" +
-      "</div></div>");
+  container.hide();
+  loading.show();
+  loading.html("<div class='loadingio-spinner-spinner-ib6rz94n49a loading1'><div class='ldio-ioww6g0mvq loading2'>" +
+      "<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>" +
+      "<div></div><div></div></div></div>");
   deleteMovie(deleteMovieID.val());
   getMovies().then((movies) => {
-    console.log('Here are all the movies:');
     let result = '';
     movies.forEach(({title, rating, id, img}) => {
-      console.log(`id#${id} - ${title} - rating: ${rating}`);
       if(img === "") {
         img = "img/Coming-Soon.jpg";
       }
@@ -111,8 +114,9 @@ deleteMovieButton.click(function(){
           "</div>" +
           "</div>" +
           "</div>";
-      console.log(result);
     });
+    loading.hide();
+    container.show();
     container.html(result);
   }).catch((error) => {
     alert('Oh no! Something went wrong.\nCheck the console for details.')
@@ -121,10 +125,9 @@ deleteMovieButton.click(function(){
 });
 
 getMovies().then((movies) => {
-  console.log('Here are all the movies:');
+  container.hide();
   let result = '';
   movies.forEach(({title, rating, id, img}) => {
-    console.log(`id#${id} - ${title} - rating: ${rating}`);
     if(img === "") {
       img = "img/Coming-Soon.jpg";
     }
@@ -141,8 +144,9 @@ getMovies().then((movies) => {
         "</div>" +
         "</div>" +
         "</div>";
-    console.log(result);
   });
+  loading.hide();
+  container.show();
   container.html(result);
 }).catch((error) => {
   alert('Oh no! Something went wrong.\nCheck the console for details.')
